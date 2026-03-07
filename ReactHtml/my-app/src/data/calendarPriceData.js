@@ -1,0 +1,123 @@
+export const calendarData = [
+  {
+    id: 1,
+    country: 'Беларусь',
+    flagStyle: { backgroundPosition: '0px -784px' },
+    hasVisa: false,
+    weather: {
+      air: 12,
+      water: null
+    },
+    date: '13 апр',
+    price: {
+      value: '869',
+      currency: 'РУБ'
+    }
+  },
+  {
+    id: 2,
+    country: 'Абхазия',
+    flagStyle: { backgroundPosition: '0px -630px' },
+    hasVisa: false,
+    weather: {
+      air: 17,
+      water: 18
+    },
+    date: '22 мая',
+    price: {
+      value: '1 377',
+      currency: 'РУБ'
+    }
+  },
+  {
+    id: 3,
+    country: 'Индия',
+    flagStyle: { backgroundPosition: '0px -28px' },
+    hasVisa: true,
+    weather: {
+      air: 32,
+      water: 27
+    },
+    date: '7 мар',
+    price: {
+      value: '1 644',
+      currency: 'РУБ'
+    }
+  },
+  {
+    id: 4,
+    country: 'Вьетнам',
+    flagStyle: { backgroundPosition: '0px -210px' },
+    hasVisa: false,
+    weather: {
+      air: 28,
+      water: 23
+    },
+    date: '22 фев',
+    price: {
+      value: '1 773',
+      currency: 'РУБ'
+    }
+  },
+  {
+    id: 5,
+    country: 'Россия',
+    flagStyle: { backgroundPosition: '0px -644px' },
+    hasVisa: false,
+    weather: {
+      air: 18,
+      water: 15
+    },
+    date: '6 мая',
+    price: {
+      value: '1 788',
+      currency: 'РУБ'
+    }
+  },
+  {
+    id: 6,
+    country: 'Венгрия',
+    flagStyle: { backgroundPosition: '0px -504px' },
+    hasVisa: true,
+    weather: {
+      air: 10,
+      water: null
+    },
+    date: '16 мар',
+    price: {
+      value: '2 117',
+      currency: 'РУБ'
+    }
+  },
+  {
+    id: 7,
+    country: 'Индонезия',
+    flagStyle: { backgroundPosition: '0px -84px' },
+    hasVisa: false,
+    weather: {
+      air: 31,
+      water: 28
+    },
+    date: '1 июн',
+    price: {
+      value: '2 354',
+      currency: 'РУБ'
+    }
+  },
+  {
+    id: 8,
+    country: 'Таиланд',
+    flagStyle: { backgroundPosition: '0px -14px' },
+    hasVisa: false,
+    weather: {
+      air: 33,
+      water: 28
+    },
+    date: '11 мая',
+    price: {
+      value: '2 971',
+      currency: 'РУБ'
+    },
+    isLast: true
+  }
+];

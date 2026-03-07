@@ -1,0 +1,33 @@
+// Данные для формы поиска
+export const searchModes = [
+  {
+    id: 'tours',
+    label: 'Туры с перелетом',
+    value: 'tours',
+    checked: true
+  },
+  {
+    id: 'hotels',
+    label: 'Отели',
+    value: 'hotels',
+    checked: false
+  }
+];
+
+export const themeConfig = {
+  primaryColor: 'rgb(62, 81, 248)',
+  textColor: 'rgb(255, 255, 255)',
+  size: 'S',
+  gapSize: 'M',
+  fontSize: 'M',
+  fontWeight: 'Size-M'
+};
+
+// Функция для получения конфигурации
+export const getSearchTypeConfig = () => {
+  return {
+    modes: searchModes,
+    theme: themeConfig,
+    groupName: 'InputRadiovzdlg'
+  };
+};

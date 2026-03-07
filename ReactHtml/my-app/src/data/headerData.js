@@ -1,0 +1,19 @@
+export const headerData = {
+  phone: '+7 812 385-58-08',
+  workingHours: 'пн-вс 10:00 – 22:00',
+  officesText: 'ОФИСЫ ПРОДАЖ',
+  supportText: 'Мы на связи',
+  menuItems: [
+    { id: 'tours', label: 'Поиск туров', href: '#toursearch' },
+    { id: 'hot', label: 'Горящие туры', href: '#HotTours9971278', hasIcon: true, icon: 'fire' },
+    { id: 'countries', label: 'Страны', href: '#countries' },
+    { id: 'cruises', label: 'Круизы', href: '#cruises' },
+    { 
+      id: 'info', 
+      label: 'Полезная информация', 
+      href: '#info',
+      hasDropdown: true,
+      dropdownItems: ['Визы', 'Страховка', 'Бронирование']
+    }
+  ]
+};

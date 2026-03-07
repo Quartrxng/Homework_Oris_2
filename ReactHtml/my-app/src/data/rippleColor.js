@@ -1,0 +1,8 @@
+export const rippleColorMap = {
+  white: 'rgba(255, 255, 255, 0.2)',
+  gray: 'rgba(77, 77, 77, 0.2)',
+  black: 'rgba(0, 0, 0, 0.2)',
+  red: 'rgba(255, 0, 0, 0.2)',
+};
+
+export const defaultRippleColor = 'rgba(255, 255, 255, 0.2)';
