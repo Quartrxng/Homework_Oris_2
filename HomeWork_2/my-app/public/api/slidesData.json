@@ -1,0 +1,47 @@
+{
+  "slidesData": [
+    {
+      "id": 1,
+      "bgImage": "/img/banner_turke_bg.png",
+      "flagImage": "/img/turkey_flag.png",
+      "category": "топ летнего отдыха",
+      "title": "Турция",
+      "price": "от 62 000 ₽",
+      "link": "#toursearch"
+    },
+    {
+      "id": 2,
+      "bgImage": "/img/banner_egypt_bg.png",
+      "flagImage": "/img/egypt_flag.png",
+      "category": "топ зимнего отдыха",
+      "title": "Египет",
+      "price": "от 94 000 ₽",
+      "link": "#toursearch"
+    },
+    {
+      "id": 3,
+      "bgImage": "/img/tunis_banner.png",
+      "category": "ТОП ЛЕТНЕГО ОТДЫХА",
+      "title": "ТУНИС",
+      "price": "от 81 000 ₽",
+      "link": "#toursearch"
+    },
+    {
+      "id": 4,
+      "bgImage": "/img/Dubai.png",
+      "category": "топ зимнего отдыха",
+      "title": "ОАЭ",
+      "price": "от 49 000 ₽",
+      "link": "#toursearch"
+    },
+    {
+      "id": 5,
+      "bgImage": "/img/thailand_banner.png",
+      "category": "топ зимнего отдыха",
+      "title": "Таиланд",
+      "price": "от 73 000 ₽",
+      "link": "#toursearch",
+      "isRedPrice": true
+    }
+  ]
+}

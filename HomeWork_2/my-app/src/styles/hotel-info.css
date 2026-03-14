@@ -1,0 +1,268 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    margin: 0px;
+}
+.hotels__site * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hotels__site {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.hotels__site .hotel-wrapper {
+    margin-bottom: 50px;
+}
+
+.hotels__site .hotel-header {
+    margin-bottom: 30px;
+}
+
+.hotels__site .stars {
+    display: flex;
+    gap: 2px;
+}
+
+.hotels__site .star-icon {
+    width: 12px;
+    height: 13px;
+    fill: #ff6856;
+}
+
+.hotels__site .hotel-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 2px 0;
+}
+
+.hotels__site .hotel-location {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 500;
+    color: #5c6672;
+    opacity: .7;
+    margin-top: 5px;
+}
+
+.hotels__site .hotel-nav-buttons {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    margin-top: 30px;
+    overflow-x: auto;
+    display: flex;
+}
+
+.hotels__site .hotel-nav-button {
+    cursor: pointer;
+    padding: 10px 15px;
+    background: #edf2f5;
+    color: #5c6672;
+    text-decoration: none;
+    white-space: nowrap;
+    border: none;
+    border-radius: 30px;
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 13px;
+    font-family: "Montserrat", "Trebuchet MS", arial, sans-serif;
+}
+
+.hotels__site .hotel-nav-button.active {
+    background-color: #5c6672;
+    color: white;
+    font-weight: 500;
+}
+
+.hotels__site .description {
+    position: relative;
+    max-height: 55px;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.hotels__site .description .rating__container {
+    float: left;
+    margin-right: 10px;
+}
+
+.hotels__site .description .rating__container .rating {
+    display: inline-block;
+    padding: 0 5px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    color: #fff;
+    border-color: #fff;
+    border-style: solid;
+    border-radius: 2px;
+    border-width: 0px;
+}
+
+.hotels__site .description .description-text {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #5c6672;
+}
+
+.hotels__site .rating.verybad { background-color: #d64545; }
+.hotels__site .rating.bad { background-color: #e07a55; }
+.hotels__site .rating.normal { background-color: #e6b661; }
+.hotels__site .rating.good { background-color: #5cb85c; }
+.hotels__site .rating.verygood { background-color: #4bdc4b; }
+
+.hotels__site .slider-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.hotels__site .slider-images {
+    display: flex;
+    width: max-content; 
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+    border-radius: 10px;
+}
+
+.hotels__site .mask-image {
+    flex: 0 0 592px; 
+    width: 592px;
+    height: 400px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden; 
+    margin-right: 10px;
+}
+
+.hotels__site .slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotels__site .NavLeft, 
+.hotels__site .NavRight {
+    position: absolute;
+    padding: 10px 5px;
+    background-color: rgba(18,17,17,.75);
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+    transition: opacity .5s ease-in-out;
+    user-select: none;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hotels__site .NavLeft {
+    left: 0;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.hotels__site .NavRight {
+    right: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.hotels__site .LeftImg, 
+.hotels__site .RightImg {
+    background-image: url(../img/minprice-sprite.png);
+    width: 18px;
+    height: 33px;
+}
+
+.hotels__site .LeftImg { background-position: -1px -99px; }
+.hotels__site .RightImg { background-position: -18px -99px; }
+
+.hotels__site .slider-container:hover .NavLeft, 
+.hotels__site .slider-container:hover .NavRight {
+    opacity: 1;
+}
+
+.hotels__site .section {
+    margin-bottom: 30px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #5c6672;
+    margin-top: 30px;
+}
+
+.hotels__site .section h3 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 30px;
+}
+
+.hotels__site .section div {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #5c6672;
+    margin-top: 15px;
+}
+
+.hotels__site .section a {
+    color: #185584;
+    border-bottom: 1px dashed;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.hotels__site .section-content {
+    text-align: left;
+}
+
+.hotels__site ul {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #5c6672;
+    list-style-type: disc;
+    padding-inline-start: 40px;
+    margin-top: 15px;
+}
+
+.hotels__site li {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    color: #5c6672;
+}
+
+@media (max-width: 768px) {
+    .hotels__site .hotel-title {
+        font-size: 1.5em;
+    }
+
+    .hotels__site .slider-image {
+        height: 300px;
+    }
+
+    .hotels__site .hotel-nav-buttons {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}

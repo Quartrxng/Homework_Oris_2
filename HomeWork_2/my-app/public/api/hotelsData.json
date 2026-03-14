@@ -1,0 +1,214 @@
+{
+  "hotelsData": [
+    {
+      "id": "1",
+      "name": "Adults Only 5*",
+      "stars": 5,
+      "location": "Россия, Геленджик",
+      "rating": 4.9,
+      "ratingStatus": "verygood",
+      "descriptionText": "Отель только для взрослых",
+      "price": 11000,
+      "currency": "РУБ",
+      "images": [
+        "/hotels/data/Россия/Геленджик/4/adults1_1.jpg",
+        "/hotels/data/Россия/Геленджик/4/adults1.jpg"
+      ],
+      "sections": [
+        {
+          "title": "Общая информация",
+          "items": ["Премиальный отель", "Первая линия", "Тел: +78614112233"]
+        },
+        {
+          "title": "Эксклюзивный досуг",
+          "items": ["Личный консьерж", "Спа-ритуалы для пар", "Винные дегустации"]
+        },
+        {
+          "title": "Правила клуба",
+          "items": ["Строго 18+", "Dress-code: Smart Casual", "No kids policy"]
+        }
+      ],
+      "search": {
+        "country": "Россия",
+        "city": "Геленджик",
+        "placementType": "city",
+        "mealPlans": ["bb", "hb", "ai"],
+        "beachLine": "1",
+        "services": ["wifi", "spa", "beach", "pool"],
+        "accommodation": {
+          "maxAdults": 2,
+          "maxChildren": 0,
+          "maxGuests": 2
+        },
+        "availability": [
+          { "from": "2026-03-01", "to": "2026-12-31" }
+        ]
+      }
+    },
+    {
+      "id": "5",
+      "name": "Family Resort 4*",
+      "stars": 4,
+      "location": "Турция, Анталия",
+      "rating": 4.4,
+      "ratingStatus": "good",
+      "descriptionText": "Семейный курорт с аквапарком",
+      "price": 8700,
+      "currency": "РУБ",
+      "images": [
+        "/hotels/data/Турция/Геленджик/5/beach1.jpg",
+        "/hotels/data/Турция/Геленджик/5/beach1_1.jpg"
+      ],
+      "sections": [
+        {
+          "title": "Общая информация",
+          "items": ["Семейный отель", "Собственный пляж", "Детская анимация"]
+        }
+      ],
+      "search": {
+        "country": "Турция",
+        "city": "Анталия",
+        "placementType": "city",
+        "mealPlans": ["hb", "fb", "ai", "uai"],
+        "beachLine": "1",
+        "services": ["wifi", "pool", "parking", "beach"],
+        "accommodation": {
+          "maxAdults": 4,
+          "maxChildren": 3,
+          "maxGuests": 5
+        },
+        "availability": [
+          { "from": "2026-04-01", "to": "2026-11-15" }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "name": "City Comfort 3*",
+      "stars": 3,
+      "location": "Россия, Анапа",
+      "rating": 3.9,
+      "ratingStatus": "normal",
+      "descriptionText": "Городской отель рядом с набережной",
+      "price": 5900,
+      "currency": "РУБ",
+      "images": [
+        "/hotels/data/Россия/Анапа/3/family1.jpg",
+        "/hotels/data/Россия/Анапа/3/family1_1.jpg"
+      ],
+      "sections": [
+        {
+          "title": "Общая информация",
+          "items": ["Городской отель", "Подходит для коротких поездок"]
+        }
+      ],
+      "search": {
+        "country": "Россия",
+        "city": "Анапа",
+        "placementType": "city",
+        "mealPlans": ["bb"],
+        "beachLine": "2",
+        "services": ["wifi", "parking"],
+        "accommodation": {
+          "maxAdults": 3,
+          "maxChildren": 1,
+          "maxGuests": 3
+        },
+        "availability": [
+          { "from": "2026-03-01", "to": "2026-10-31" }
+        ]
+      }
+    },
+    {
+      "id": "6",
+      "name": "Mountain View Chalet 4*",
+      "stars": 4,
+      "location": "Россия, Красная Поляна",
+      "rating": 4.2,
+      "ratingStatus": "good",
+      "descriptionText": "Уютный горный отель рядом с канатной дорогой",
+      "price": 7600,
+      "currency": "РУБ",
+      "images": [
+        "/hotels/data/Россия/Красная Поляна/6/mountain1.jpg",
+        "/hotels/data/Россия/Красная Поляна/6/mountain1_1.jpg"
+      ],
+      "sections": [
+        {
+          "title": "Общая информация",
+          "items": ["Горный отель", "Панорамный вид", "Рядом с подъемником"]
+        },
+        {
+          "title": "Инфраструктура",
+          "items": ["Сауна", "Ресторан", "Лыжная комната"]
+        },
+        {
+          "title": "Удобства",
+          "items": ["Бесплатный Wi-Fi", "Парковка", "Завтраки включены"]
+        }
+      ],
+      "search": {
+        "country": "Россия",
+        "city": "Красная Поляна",
+        "placementType": "city",
+        "mealPlans": ["bb", "hb"],
+        "beachLine": "any",
+        "services": ["wifi", "parking", "sauna", "restaurant"],
+        "accommodation": {
+          "maxAdults": 4,
+          "maxChildren": 2,
+          "maxGuests": 4
+        },
+        "availability": [
+          { "from": "2026-01-10", "to": "2026-12-31" }
+        ]
+      }
+    },
+        {
+      "id": "7",
+      "name": "Sea Breeze Hotel 5*",
+      "stars": 5,
+      "location": "Египет, Хургада",
+      "rating": 4.7,
+      "ratingStatus": "verygood",
+      "descriptionText": "Пляжный отель с системой Ultra All Inclusive",
+      "price": 9800,
+      "currency": "РУБ",
+      "images": [
+        "/hotels/data/Египет/Хургада/7/hotel1.jpg",
+        "/hotels/data/Египет/Хургада/7/hotel1_1.jpg",
+        "/hotels/data/Египет/Хургада/7/hotel1_2.jpg"
+      ],
+      "sections": [
+        {
+          "title": "Общая информация",
+          "items": ["Курортный отель", "Первая береговая линия", "Собственный песчаный пляж"]
+        },
+        {
+          "title": "Инфраструктура",
+          "items": ["3 бассейна", "Спа-центр", "Тренажерный зал"]
+        },
+        {
+          "title": "Для гостей",
+          "items": ["Ultra All Inclusive", "Ежедневная анимация", "Трансфер до аэропорта"]
+        }
+      ],
+      "search": {
+        "country": "Египет",
+        "city": "Хургада",
+        "placementType": "city",
+        "mealPlans": ["ai", "uai"],
+        "beachLine": "1",
+        "services": ["wifi", "spa", "beach", "pool", "transfer"],
+        "accommodation": {
+          "maxAdults": 3,
+          "maxChildren": 2,
+          "maxGuests": 4
+        },
+        "availability": [
+          { "from": "2026-03-15", "to": "2026-12-20" }
+        ]
+      }
+    }
+  ]
+}
