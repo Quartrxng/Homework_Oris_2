@@ -1,0 +1,120 @@
+{
+  "filtersData": {
+    "variant1": {
+      "filters": [
+        {
+          "type": "departure",
+          "order": 1,
+          "placeholder": "Город вылета",
+          "value": "Без перелета",
+          "options": ["Без перелета", "Москва", "Санкт-Петербург", "Казань", "Екатеринбург"]
+        },
+        {
+          "type": "stars",
+          "order": 2,
+          "title": "Отель",
+          "activeStars": 1,
+          "maxStars": 5,
+          "size": "S"
+        },
+        {
+          "type": "budget",
+          "order": 3,
+          "placeholder": "Бюджет (РУБ)",
+          "currency": "РУБ"
+        },
+        {
+          "type": "checkbox",
+          "subtype": "visa",
+          "order": 4,
+          "label": "Без виз",
+          "checked": false
+        },
+        {
+          "type": "checkbox",
+          "subtype": "flight",
+          "order": 5,
+          "label": "Только чартер",
+          "checked": false,
+          "disabled": true
+        }
+      ]
+    },
+    "variant2": {
+      "filters": [
+        {
+          "type": "departure",
+          "order": 1,
+          "placeholder": "Город вылета",
+          "value": "Без перелета",
+          "options": ["Без перелета", "Москва", "Санкт-Петербург", "Казань", "Екатеринбург"]
+        },
+        {
+          "type": "country",
+          "order": 2,
+          "placeholder": "Страна",
+          "options": ["Все страны", "Индия", "Таиланд", "Турция", "Египет"]
+        },
+        {
+          "type": "flyDates",
+          "order": 3,
+          "placeholder": "Даты вылета",
+          "options": ["На любое", "Март", "Апрель", "Май", "Июнь"]
+        },
+        {
+          "type": "stars",
+          "order": 4,
+          "title": "Отель",
+          "activeStars": 1,
+          "maxStars": 5,
+          "size": "S"
+        },
+        {
+          "type": "budget",
+          "order": 5,
+          "placeholder": "Бюджет (РУБ)",
+          "currency": "РУБ"
+        },
+        {
+          "type": "hideButton",
+          "order": 6
+        }
+      ]
+    }
+  },
+  "dynamicFilters": {
+    "default": [
+      {
+        "type": "meal",
+        "label": "Питание",
+        "order": 1,
+        "defaultValue": "any",
+        "displayMode": "codeAndSuffix",
+        "displaySuffix": " и лучше",
+        "options": [
+          { "value": "any", "label": "Любой" },
+          { "value": "bb", "code": "BB", "description": " - Только завтрак" },
+          { "value": "hb", "code": "HB", "description": " - Завтрак, ужин" },
+          { "value": "fb", "code": "FB", "description": " - Полный пансион" },
+          { "value": "ai", "code": "AI", "description": " - Все включено" },
+          { "value": "uai", "code": "UAI", "description": " - Ультра все включено" }
+        ]
+      },
+      {
+        "type": "rating",
+        "label": "Рейтинг",
+        "order": 2,
+        "defaultValue": "any",
+        "displayMode": "codeAndSuffix",
+        "displaySuffix": " и более",
+        "options": [
+          { "value": "any", "label": "Любой" },
+          { "value": "3.0", "code": "3,0" },
+          { "value": "3.5", "code": "3,5" },
+          { "value": "4.0", "code": "4,0" },
+          { "value": "4.5", "code": "4,5" }
+        ]
+      }
+    ]
+  }
+}
