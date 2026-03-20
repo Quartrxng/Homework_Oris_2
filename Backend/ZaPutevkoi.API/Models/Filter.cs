@@ -2,6 +2,15 @@
 
 namespace ZaPutevkoi.API.Models
 {
+
+    public class TourFilterRequest
+    {
+        public string? Country { get; set; }
+        public string? Meal { get; set; }
+        public double? Rating { get; set; }
+        public int? Stars { get; set; }
+        public int? MaxPrice { get; set; }
+    }
     public class FiltersData
     {
         public VariantConfig Variant2 { get; set; }

@@ -3,11 +3,11 @@ import ServicesTooltipComponent from '../components/servicesTooltip';
 
 const fallbackData = {
   servicesData: [
-    { id: 'wifi', category_Name: 'Популярное', category_Order: 1, service_Name: 'Wi‑Fi', service_Order: 1 },
-    { id: 'pool', category_Name: 'Популярное', category_Order: 1, service_Name: 'Бассейн', service_Order: 2 },
-    { id: 'spa', category_Name: 'Комфорт', category_Order: 2, service_Name: 'SPA', service_Order: 1 },
-    { id: 'parking', category_Name: 'Комфорт', category_Order: 2, service_Name: 'Парковка', service_Order: 2 },
-    { id: 'beach', category_Name: 'Отдых', category_Order: 3, service_Name: 'Пляж', service_Order: 1 },
+    { id: 1, category_Name: 'Популярное', category_Order: 1, service_Name: 'Wi-Fi', service_Order: 1 },
+    { id: 2, category_Name: 'Популярное', category_Order: 1, service_Name: 'Бассейн', service_Order: 2 },
+    { id: 3, category_Name: 'Комфорт', category_Order: 2, service_Name: 'SPA', service_Order: 1 },
+    { id: 4, category_Name: 'Комфорт', category_Order: 2, service_Name: 'Парковка', service_Order: 2 },
+    { id: 5, category_Name: 'Отдых', category_Order: 3, service_Name: 'Пляж', service_Order: 1 },
   ],
 };
 
@@ -41,12 +41,14 @@ const ServicesTooltipContainer = ({ value = [], onChange }) => {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch('/api/servicesData.json');
-        if (!response.ok) throw new Error('Ошибка загрузки servicesData.json');
+        const response = await fetch('https://localhost:7273/api/Filter');
+        if (!response.ok) throw new Error('Ошибка загрузки данных API');
         const data = await response.json();
-        setCategories(groupServicesByCategory(data.servicesData || []));
+
+        const servicesData = data.filterData?.servicesData || fallbackData.servicesData;
+        setCategories(groupServicesByCategory(servicesData));
       } catch (error) {
-        console.error('Ошибка загрузки servicesData.json:', error);
+        console.error('Ошибка загрузки servicesData с API:', error);
         setCategories(groupServicesByCategory(fallbackData.servicesData));
       }
     };
@@ -77,21 +79,23 @@ const ServicesTooltipContainer = ({ value = [], onChange }) => {
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (
-        isOpen && tooltipRef.current && !tooltipRef.current.contains(e.target) &&
-        filterButtonRef.current && !filterButtonRef.current.contains(e.target)
+        isOpen &&
+        tooltipRef.current &&
+        !tooltipRef.current.contains(e.target) &&
+        filterButtonRef.current &&
+        !filterButtonRef.current.contains(e.target)
       ) {
         setIsOpen(false);
         setActiveTab('all');
       }
     };
-
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, [isOpen]);
 
   const toggleService = (id) => {
     setSelectedServices((prev) => {
-      const updated = prev.includes(id) ? prev.filter((serviceId) => serviceId !== id) : [...prev, id];
+      const updated = prev.includes(id) ? prev.filter((sid) => sid !== id) : [...prev, id];
       onChange?.(updated);
       return updated;
     });
@@ -102,7 +106,7 @@ const ServicesTooltipContainer = ({ value = [], onChange }) => {
   const getDisplayText = () => {
     if (!selectedCount) return 'Любой';
     if (selectedCount === 1) {
-      const service = categories.flatMap((category) => category.services).find((item) => item.id === selectedServices[0]);
+      const service = categories.flatMap((c) => c.services).find((s) => s.id === selectedServices[0]);
       return service?.serviceName || 'Выбрано (1)';
     }
     return `Выбрано (${selectedCount})`;

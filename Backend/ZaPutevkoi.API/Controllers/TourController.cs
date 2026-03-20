@@ -10,11 +10,38 @@ namespace ZaPutevkoi.API.Controllers
     [ApiController]
     public class TourController : ControllerBase
     {
-        // GET: api/<TourController>
+        // GET: api/tour?country=Турция&meal=ai&rating=4.0&stars=4&maxPrice=10000
         [HttpGet]
-        public IActionResult GetHotels()
+        public IActionResult GetHotels([FromQuery] TourFilterRequest filters)
         {
-            return Ok(new { hotelsData = DataSeed.HotelsData });
+            var hotels = DataSeed.HotelsData.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(filters.Country) && filters.Country != "Все страны")
+            {
+                hotels = hotels.Where(h => h.Search.Country == filters.Country);
+            }
+
+            if (!string.IsNullOrWhiteSpace(filters.Meal) && filters.Meal != "any")
+            {
+                hotels = hotels.Where(h => h.Search.MealPlans.Contains(filters.Meal));
+            }
+
+            if (filters.Rating.HasValue)
+            {
+                hotels = hotels.Where(h => h.Rating >= filters.Rating.Value);
+            }
+
+            if (filters.Stars.HasValue)
+            {
+                hotels = hotels.Where(h => h.Stars >= filters.Stars.Value);
+            }
+
+            if (filters.MaxPrice.HasValue)
+            {
+                hotels = hotels.Where(h => h.Price <= filters.MaxPrice.Value);
+            }
+
+            return Ok(new { hotelsData = hotels.ToList() });
         }
 
         // GET api/<TourController>/5

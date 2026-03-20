@@ -70,10 +70,12 @@ export default function FiltersContainer({ variant = 'default', value = {}, onCh
   useEffect(() => {
     const loadFilters = async () => {
       try {
-        const response = await fetch('/api/filtersData.json');
-        if (!response.ok) throw new Error('Ошибка загрузки filtersData.json');
+        const response = await fetch('https://localhost:7273/api/Filter');
+        if (!response.ok) throw new Error('Ошибка загрузки API');
         const data = await response.json();
-        const dynamicFilters = data.dynamicFilters?.[variant] || fallbackFilters;
+
+        const dynamicFilters = data.filterData?.dynamicFilters?.[variant] || fallbackFilters;
+
         setFilters(dynamicFilters);
 
         const initialState = dynamicFilters.reduce((acc, filter) => {
@@ -84,7 +86,7 @@ export default function FiltersContainer({ variant = 'default', value = {}, onCh
         setSelectedValues(initialState);
         onChange?.(initialState);
       } catch (error) {
-        console.error('Ошибка загрузки фильтров:', error);
+        console.error('Ошибка загрузки фильтров с API:', error);
         const initialState = fallbackFilters.reduce((acc, filter) => {
           acc[filter.type] = value[filter.type] ?? getDefaultValue(filter);
           return acc;
