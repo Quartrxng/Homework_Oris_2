@@ -1,4 +1,5 @@
-﻿using ZaPutevkoi.API.data;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json;
 
 namespace ZaPutevkoi.API.Models
 {
@@ -13,9 +14,49 @@ namespace ZaPutevkoi.API.Models
         public string DescriptionText { get; set; }
         public int Price { get; set; }
         public string Currency { get; set; }
-        public List<string> Images { get; set; }
-        public List<HotelSection> Sections { get; set; }
-        public HotelFilters Search { get; set; }
+
+        public string ImagesJson { get; set; }
+        public string SectionsJson { get; set; }
+        public string SearchJson { get; set; }
+
+        [NotMapped]
+        public List<string> Images
+        {
+            get
+            {
+                return string.IsNullOrEmpty(ImagesJson)
+                ? new List<string>()
+                : JsonSerializer.Deserialize<List<string>>(ImagesJson);
+            }
+
+            set => ImagesJson = JsonSerializer.Serialize(value);
+        }
+
+        [NotMapped]
+        public List<HotelSection> Sections
+        {
+            get
+            {
+                return string.IsNullOrEmpty(SectionsJson)
+                ? new List<HotelSection>()
+                : JsonSerializer.Deserialize<List<HotelSection>>(SectionsJson);
+            }
+
+            set => SectionsJson = JsonSerializer.Serialize(value);
+        }
+
+        [NotMapped]
+        public HotelFilters Search
+        {
+            get
+            {
+                return string.IsNullOrEmpty(SearchJson)
+                ? new HotelFilters()
+                : JsonSerializer.Deserialize<HotelFilters>(SearchJson);
+            }
+
+            set => SearchJson = JsonSerializer.Serialize(value);
+        }
     }
 
     public class Accommodation
@@ -30,6 +71,7 @@ namespace ZaPutevkoi.API.Models
         public string From { get; set; }
         public string To { get; set; }
     }
+
     public class HotelSection
     {
         public string Title { get; set; }

@@ -8,7 +8,6 @@ namespace ZaPutevkoi.API.data
         {
             new Hotel
             {
-                Id = 1,
                 Name = "Adults Only 5*",
                 Stars = 5,
                 Location = "Россия, Геленджик",
@@ -80,7 +79,6 @@ namespace ZaPutevkoi.API.data
 
             new Hotel
             {
-                Id = 5,
                 Name = "Family Resort 4*",
                 Stars = 4,
                 Location = "Турция, Анталия",
@@ -132,7 +130,6 @@ namespace ZaPutevkoi.API.data
 
             new Hotel
             {
-                Id = 3,
                 Name = "City Comfort 3*",
                 Stars = 3,
                 Location = "Россия, Анапа",
@@ -183,7 +180,6 @@ namespace ZaPutevkoi.API.data
 
             new Hotel
             {
-                Id = 6,
                 Name = "Mountain View Chalet 4*",
                 Stars = 4,
                 Location = "Россия, Красная Поляна",
@@ -255,7 +251,6 @@ namespace ZaPutevkoi.API.data
 
             new Hotel
             {
-                Id = 7,
                 Name = "Sea Breeze Hotel 5*",
                 Stars = 5,
                 Location = "Египет, Хургада",
