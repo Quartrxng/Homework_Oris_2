@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json;
-
-namespace ZaPutevkoi.API.Models
+﻿namespace ZaPutevkoi.API.Models
 {
     public class Hotel
     {
@@ -15,48 +12,14 @@ namespace ZaPutevkoi.API.Models
         public int Price { get; set; }
         public string Currency { get; set; }
 
-        public string ImagesJson { get; set; }
-        public string SectionsJson { get; set; }
-        public string SearchJson { get; set; }
+        public List<HotelImage> Images { get; set; } = new();
+        public List<HotelSection> Sections { get; set; } = new();
+        public HotelFilters Search { get; set; }
+    }
 
-        [NotMapped]
-        public List<string> Images
-        {
-            get
-            {
-                return string.IsNullOrEmpty(ImagesJson)
-                ? new List<string>()
-                : JsonSerializer.Deserialize<List<string>>(ImagesJson);
-            }
-
-            set => ImagesJson = JsonSerializer.Serialize(value);
-        }
-
-        [NotMapped]
-        public List<HotelSection> Sections
-        {
-            get
-            {
-                return string.IsNullOrEmpty(SectionsJson)
-                ? new List<HotelSection>()
-                : JsonSerializer.Deserialize<List<HotelSection>>(SectionsJson);
-            }
-
-            set => SectionsJson = JsonSerializer.Serialize(value);
-        }
-
-        [NotMapped]
-        public HotelFilters Search
-        {
-            get
-            {
-                return string.IsNullOrEmpty(SearchJson)
-                ? new HotelFilters()
-                : JsonSerializer.Deserialize<HotelFilters>(SearchJson);
-            }
-
-            set => SearchJson = JsonSerializer.Serialize(value);
-        }
+    public class HotelImage
+    {
+        public string Path { get; set; }
     }
 
     public class Accommodation
@@ -75,16 +38,16 @@ namespace ZaPutevkoi.API.Models
     public class HotelSection
     {
         public string Title { get; set; }
-        public List<string> Items { get; set; }
+        public List<string> Items { get; set; } = new();
     }
 
     public class HotelFilters
     {
         public string Country { get; set; }
         public string City { get; set; }
-        public List<string> MealPlans { get; set; }
-        public List<string> Services { get; set; }
+        public List<string> MealPlans { get; set; } = new();
+        public List<string> Services { get; set; } = new();
         public Accommodation Accommodation { get; set; }
-        public List<AvailabilityPeriod> Availability { get; set; }
+        public List<AvailabilityPeriod> Availability { get; set; } = new();
     }
 }

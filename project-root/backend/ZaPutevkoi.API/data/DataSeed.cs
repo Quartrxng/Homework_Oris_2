@@ -16,10 +16,10 @@ namespace ZaPutevkoi.API.data
                 DescriptionText = "Отель только для взрослых",
                 Price = 11000,
                 Currency = "РУБ",
-                Images = new List<string>
+                Images = new List<HotelImage>
                 {
-                    "/hotels/data/Россия/Геленджик/4/adults1_1.jpg",
-                    "/hotels/data/Россия/Геленджик/4/adults1.jpg"
+                    new HotelImage { Path = "/hotels/data/Россия/Геленджик/4/adults1_1.jpg" },
+                    new HotelImage { Path = "/hotels/data/Россия/Геленджик/4/adults1.jpg" }
                 },
                 Sections = new List<HotelSection>
                 {
@@ -87,10 +87,10 @@ namespace ZaPutevkoi.API.data
                 DescriptionText = "Семейный курорт с аквапарком",
                 Price = 8700,
                 Currency = "РУБ",
-                Images = new List<string>
+                Images = new List<HotelImage>
                 {
-                    "/hotels/data/Турция/Геленджик/5/beach1.jpg",
-                    "/hotels/data/Турция/Геленджик/5/beach1_1.jpg"
+                    new HotelImage { Path = "/hotels/data/Турция/Геленджик/5/beach1.jpg" },
+                    new HotelImage { Path = "/hotels/data/Турция/Геленджик/5/beach1_1.jpg" }
                 },
                 Sections = new List<HotelSection>
                 {
@@ -138,10 +138,10 @@ namespace ZaPutevkoi.API.data
                 DescriptionText = "Городской отель рядом с набережной",
                 Price = 5900,
                 Currency = "РУБ",
-                Images = new List<string>
+                Images = new List<HotelImage>
                 {
-                    "/hotels/data/Россия/Анапа/3/family1.jpg",
-                    "/hotels/data/Россия/Анапа/3/family1_1.jpg"
+                    new HotelImage { Path = "/hotels/data/Россия/Анапа/3/family1.jpg" },
+                    new HotelImage { Path = "/hotels/data/Россия/Анапа/3/family1_1.jpg" }
                 },
                 Sections = new List<HotelSection>
                 {
@@ -188,10 +188,10 @@ namespace ZaPutevkoi.API.data
                 DescriptionText = "Уютный горный отель рядом с канатной дорогой",
                 Price = 7600,
                 Currency = "РУБ",
-                Images = new List<string>
+                Images = new List<HotelImage>
                 {
-                    "/hotels/data/Россия/Красная Поляна/6/mountain1.jpg",
-                    "/hotels/data/Россия/Красная Поляна/6/mountain1_1.jpg"
+                    new HotelImage { Path = "/hotels/data/Россия/Красная Поляна/6/mountain1.jpg" },
+                    new HotelImage { Path = "/hotels/data/Россия/Красная Поляна/6/mountain1_1.jpg" }
                 },
                 Sections = new List<HotelSection>
                 {
@@ -259,11 +259,11 @@ namespace ZaPutevkoi.API.data
                 DescriptionText = "Пляжный отель с системой Ultra All Inclusive",
                 Price = 9800,
                 Currency = "РУБ",
-                Images = new List<string>
+                Images = new List<HotelImage>
                 {
-                    "/hotels/data/Египет/Хургада/7/hotel1.jpg",
-                    "/hotels/data/Египет/Хургада/7/hotel1_1.jpg",
-                    "/hotels/data/Египет/Хургада/7/hotel1_2.jpg"
+                    new HotelImage { Path = "/hotels/data/Египет/Хургада/7/hotel1.jpg" },
+                    new HotelImage { Path = "/hotels/data/Египет/Хургада/7/hotel1_1.jpg" },
+                    new HotelImage { Path = "/hotels/data/Египет/Хургада/7/hotel1_2.jpg" }
                 },
                 Sections = new List<HotelSection>
                 {

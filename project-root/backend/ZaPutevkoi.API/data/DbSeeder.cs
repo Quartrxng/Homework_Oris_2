@@ -1,4 +1,4 @@
-﻿using ZaPutevkoi.API.Models;
+﻿using ZaPutevkoi.API.Mappers;
 
 namespace ZaPutevkoi.API.data
 {
@@ -11,7 +11,9 @@ namespace ZaPutevkoi.API.data
             if (context.Hotels.Any())
                 return;
 
-            var hotels = DataSeed.HotelsData;
+            var hotels = DataSeed.HotelsData
+                .Select(HotelMapper.ToEntity)
+                .ToList();
 
             context.Hotels.AddRange(hotels);
             await context.SaveChangesAsync();
